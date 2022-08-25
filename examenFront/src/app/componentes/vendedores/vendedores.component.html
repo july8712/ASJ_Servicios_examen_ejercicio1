@@ -1,0 +1,41 @@
+<section id="secVendedor">
+    <h2>Agregar Vendedor</h2>
+
+
+<div class="contenedor">
+    <form (ngSubmit)="onSubmit(contactForm.value)" #contactForm="ngForm">
+        <label for="nombre">Nombre vendedor:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" [(ngModel)]="vendedor.nombre" required #nombre="ngModel">
+        <p [hidden]="nombre.valid || nombre.pristine">Ingrese un nombre válido</p>
+
+        <label for="sueldo">Sueldo:</label>
+        <input type="text" id="sueldo" name="sueldo" placeholder="100000" [(ngModel)]="vendedor.sueldo" required #sueldo="ngModel">
+        <p [hidden]="sueldo.valid || sueldo.pristine">Ingrese un nombre válido</p>
+        <div class="contBtn">
+            <input type="submit" value="Enviar" class="btnForm" [disabled]="contactForm.invalid">
+        </div>
+    </form>
+
+
+      <div class="tabla">
+        <h3>Lista de vendedores activos:</h3>
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nombre Vendedor:</th>
+              <th>Sueldo:</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let vendedor of vendedores">
+              <td>{{vendedor.nombre}}</td>
+              <td>{{vendedor.sueldo}}</td>
+              <!-- <td>{{vendedor.email}}</td>
+              <td>{{vendedor.mensaje}}</td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</section>

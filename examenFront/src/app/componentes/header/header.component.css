@@ -1,0 +1,36 @@
+header {
+  background-color: #f11f3e;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  width: 100%;
+  padding: 10px 50px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  ;
+}
+
+nav ul li {
+  list-style-type: none;
+  padding: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.6em;
+  font-weight: bold;
+  border-bottom: transparent 2px solid;
+}
+
+nav ul li a:hover {
+  border-bottom: #fff 2px solid;
+}
+
+.logo img{
+  width: 100px;
+}
